@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Project 02</title>
   </head>
-  <body>
+  <body style="height: 10000px">
     <!-- header -->
     <header>
-      <div class="content">
+      <div class="content fixed">
         <a href="#!"
           ><img class="logo" src="./assets/img/logo.svg" alt="Lesson."
         /></a>
@@ -29,13 +29,13 @@
               <a href="#!"><span>Home</span></a>
             </li>
             <li>
-              <a href="#!">Courses</a>
+              <a href="#!"><span>Courses</span></a>
             </li>
             <li>
-              <a href="#!">Pricing</a>
+              <a href="#!"><span>Pricing</span></a>
             </li>
             <li>
-              <a href="#!">Reviews</a>
+              <a href="#!"><span>Reviews</span></a>
             </li>
           </ul>
         </nav>
@@ -48,7 +48,7 @@
       <div class="content">
         <div class="left-col">
           <img
-            src="./assets/img/guy-lesson.jpg"
+            src="./assets/img/guy-lesson.png"
             alt="Learn without limits and spread knowledge."
           />
           <div class="img-block">
@@ -95,10 +95,14 @@
           </p>
           <div class="more">
             <a href="#!" class="btn info-cta">See Courses</a>
-            <div class="watch">
-              <a href="#!"><img src="./assets/img/watch.svg" alt="watch" /></a>
-            </div>
-            <a href="#!"><b class="desc">Watch Video</b></a>
+            <button class="watch-video">
+              <div class="watch">
+                <a href="#!"
+                  ><img src="./assets/img/watch.svg" alt="watch"
+                /></a>
+              </div>
+              <b>Watch Video</b>
+            </button>
           </div>
           <div class="stats">
             <p class="desc">Recent engagement</p>
@@ -107,6 +111,175 @@
               <strong class="desc"><span>70+</span> Courses</strong>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- courses -->
+    <div class="courses">
+      <div class="content">
+        <div class="row courses-row">
+          <div class="courses-desc">
+            <h2 class="title">Our popular courses</h2>
+            <p class="desc">
+              Build new skills with new trendy courses and shine for the next
+              future career.
+            </p>
+          </div>
+          <div class="icon">
+            <button class="control-btn">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 1L1 7L7 13"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="control-btn">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 1L1 7L7 13"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="courses-list">
+          <div class="course-item">
+            <a href="#!"
+              ><img src="./assets/img/web-design.jpg" alt="Basic web design"
+            /></a>
+
+            <div class="course-item-desc">
+              <div class="row">
+                <h3 class="course-name">Basic web design</h3>
+                <div class="rating">
+                  <img class="star" src="./assets/img/star.svg" alt="" /><span
+                    >4.5</span
+                  >
+                </div>
+              </div>
+              <p class="desc">
+                Get the best course, gain knowledge and shine for your future
+                career.
+              </p>
+              <div class="row-price">
+                <p class="title">$120.75</p>
+                <a href="#!" class="btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-item">
+            <a href="#!"
+              ><img src="./assets/img/uiux-design.jpg" alt="UI/UX design"
+            /></a>
+
+            <div class="course-item-desc">
+              <div class="row">
+                <h3 class="course-name">UI/UX design</h3>
+                <div class="rating">
+                  <img class="star" src="./assets/img/star.svg" alt="" /><span
+                    >4.5</span
+                  >
+                </div>
+              </div>
+              <p class="desc">
+                Get the best course, gain knowledge and shine for your future
+                career.
+              </p>
+              <div class="row-price">
+                <p class="title">$120.75</p>
+                <a href="#!" class="btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="course-item">
+            <a href="#!"
+              ><img src="./assets/img/wapp-design.jpg" alt="Web App design"
+            /></a>
+
+            <div class="course-item-desc">
+              <div class="row">
+                <h3 class="course-name">Web App design</h3>
+                <div class="rating">
+                  <img class="star" src="./assets/img/star.svg" alt="" /><span
+                    >4.5</span
+                  >
+                </div>
+              </div>
+              <p class="desc">
+                Get the best course, gain knowledge and shine for your future
+                career.
+              </p>
+              <div class="row-price">
+                <p class="title">$120.75</p>
+                <a href="#!" class="btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- reviews -->
+    <div class="review">
+      <div class="content">
+        <div class="reviewer">
+          <img
+            class="reviewer-avt"
+            src="./assets/img/reviewer.jpg"
+            alt="Peter Moor"
+          />
+          <p class="name">Peter Moor</p>
+          <p class="desc">Student of Web Design</p>
+          <div class="dots">
+            <img
+              class="dot"
+              src="./assets/img/brown-dot.svg"
+              alt=""
+              class="dot"
+            />
+            <img
+              class="dot"
+              src="./assets/img/yellow-dot.svg"
+              alt=""
+              class="dot"
+            />
+            <img
+              class="dot"
+              src="./assets/img/brown-dot.svg"
+              alt=""
+              class="dot"
+            />
+          </div>
+        </div>
+
+        <div class="feedback">
+          <img src="./assets/img/quotation-mark.svg" alt="" />
+          <blockquote>
+            Not only does my resume look impressive—filled with the names and
+            logos of world-class institutions—but these certificates also bring
+            me closer to my career goals by validating the skills I've learned."
+          </blockquote>
         </div>
       </div>
     </div>

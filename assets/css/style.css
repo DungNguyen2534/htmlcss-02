@@ -11,6 +11,8 @@
   --bgc2: #2e2100;
   --btn1: #ffb900;
   --btn2: #171100;
+  --btn-hover-1: #ffcc3e;
+  --btn-hover-2: #352d15;
   --tbtn: #fff;
 }
 
@@ -23,9 +25,12 @@ html {
 /* common */
 .content {
   width: 1170px;
-  max-width: calc(100% - 270px);
+  max-width: calc(100% - 48px);
   margin-right: auto;
   margin-left: auto;
+}
+.row {
+  display: flex;
 }
 
 .btn {
@@ -36,22 +41,31 @@ html {
   font-weight: 600;
   border-radius: 25px;
   min-width: 118px;
-  padding: 11px 0;
+  padding: 18px 0;
+}
+
+.title {
+  color: var(--hcl);
+  font-family: Sen;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.076rem;
 }
 
 .desc {
   color: var(--tcl);
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.67;
 }
 
 /* Header */
 header {
-  position: sticky;
-  top: 0;
-  padding: 36px 0;
+  padding: 36px 0 14px;
   background: var(--bgc1);
+  position: sticky;
+  top: -22px;
   z-index: 1;
 }
 
@@ -71,7 +85,7 @@ header nav ul {
 
 header nav a {
   color: var(--tcl);
-  margin-left: 42px;
+  padding: 8px 21px;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -80,37 +94,50 @@ header nav a span {
   position: relative;
   color: var(--hcl);
   font-size: 1.6rem;
-  font-weight: 600;
+}
+
+header nav a span:hover {
+  text-shadow: 0 0 0.5px var(--hcl);
 }
 
 header nav a span::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   content: "";
+  position: absolute;
   display: inline-block;
-  width: 12px;
-  height: 2px;
+  height: 3px;
+  width: 0px;
   border-radius: 12px;
   background: var(--hcl);
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+header nav a span:hover::before {
+  width: 100%;
 }
 
 header .nav-cta {
   margin-left: 70px;
   color: #fff;
   background: var(--btn2);
-  font-size: 16px;
+  font-size: 1.6rem;
+  min-width: 144px;
+  padding: 17px 0;
+}
+
+header .nav-cta:hover {
+  background: var(--btn-hover-2);
 }
 
 /* hero */
 .hero {
-  padding-top: 28px;
+  padding: 41px 65px 63px;
   background: var(--bgc1);
 }
 
 .hero .content {
   display: flex;
-  gap: 130px;
 }
 
 .hero .left-col {
@@ -127,8 +154,8 @@ header .nav-cta {
 .hero .left-col .img-block {
   display: flex;
   position: absolute;
-  right: 3px;
-  bottom: 113px;
+  right: 0px;
+  bottom: 50px;
   width: 270px;
   height: 244px;
   border-radius: 12px;
@@ -137,8 +164,8 @@ header .nav-cta {
 }
 
 .hero .img-block .icon {
-  width: 30%;
-  padding: 28px 16px 22px 24px;
+  width: 27%;
+  padding: 28px 0 22px 24px;
 }
 
 .hero .img-block .hero-icon {
@@ -153,8 +180,8 @@ header .nav-cta {
 .hero .mini-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 8px 58px 16px 24px;
+  padding-left: 16px;
+  padding-top: 10px;
 }
 
 .hero .mini-info-item strong {
@@ -174,7 +201,9 @@ header .nav-cta {
 
 .hero .info {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  padding: 64px 0 0 130px;
 }
 
 .hero .info .title {
@@ -209,19 +238,34 @@ header .nav-cta {
   margin-right: 28px;
 }
 
-.hero .info .watch {
+.hero .info .info-cta:hover {
+  background: var(--btn-hover-1);
+}
+
+.hero .watch-video {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero .info .watch {
+  position: relative;
   background: #fff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+.hero .info .watch img {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
 }
 
 .hero .info .more b {
+  padding-left: 14px;
   color: var(--hcl);
   font-size: 1.8rem;
   font-weight: 600;
@@ -244,4 +288,190 @@ header .nav-cta {
   font-size: 4.4rem;
   font-weight: 700;
   line-height: 1.2;
+}
+
+/* courses */
+.courses {
+  padding: 200px 65px;
+}
+
+.courses .courses-row {
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.courses .courses-row .title {
+  margin-bottom: 16px;
+}
+
+.courses .courses-row .desc {
+  width: 458px;
+}
+
+.courses .courses-row .control-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: var(--btn1);
+  border: 1px solid var(--btn1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.courses .courses-row .control-btn:nth-child(2) {
+  transform: rotate(180deg);
+  margin-left: 18px;
+}
+
+.courses .courses-row .control-btn:hover {
+  background: var(--btn1);
+  color: #fff;
+}
+
+.courses .courses-row .control-btn svg {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}
+
+.courses-list {
+  display: flex;
+}
+
+.courses-list .course-item + .course-item {
+  margin-left: 30px;
+}
+
+.courses-list .course-item {
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+  width: 370px;
+}
+
+.courses-list img:not(.star) {
+  width: 370px;
+  width: calc(100%-2px);
+  height: 270px;
+  margin: -1px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.course-item-desc {
+  padding: 16px 22px 22px;
+}
+
+.course-item-desc .course-name {
+  color: var(--hcl);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.course-item-desc .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-item-desc .rating {
+  display: flex;
+  align-items: center;
+}
+
+.course-item-desc .rating span {
+  color: #fea31b;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.course-item-desc .desc {
+  font-size: 1.4rem;
+}
+
+.course-item-desc .row-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.course-item-desc .row-price .title {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.course-item-desc .row-price a {
+  background: var(--btn2);
+}
+
+.course-item-desc .row-price .btn:hover {
+  background: var(--btn1);
+}
+
+.courses-list .course-item:hover {
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* reviews */
+
+.review {
+  background: var(--bgc2);
+}
+
+.review .content {
+  display: flex;
+  padding: 96px 0;
+}
+
+.review .reviewer {
+  width: 66%;
+}
+
+.review .reviewer-avt {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.review .name {
+  color: #f7f7f7;
+  font-family: Sen;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.review .reviewer .desc {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.feedback {
+  position: relative;
+  width: 66%;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.feedback img {
+  position: absolute;
+  top: -28px;
+  left: 0px;
+}
+
+.feedback blockquote {
+  color: #fff;
+  margin-left: 30px;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.53;
 }
