@@ -699,7 +699,7 @@ header .nav-cta:hover {
 }
 
 .footer-right .column {
-  width: 20%;
+  width: 21%;
 }
 
 .footer-right .column:last-child {
@@ -707,7 +707,7 @@ header .nav-cta:hover {
 }
 
 .footer-right .column + .column {
-  margin-left: 130px;
+  margin-left: 125px;
 }
 
 .footer-right .footer-title {
@@ -734,6 +734,11 @@ header .nav-cta:hover {
   font-size: 1.4rem;
   line-height: 1.86;
   margin-top: 12px;
+}
+
+.footer-right ul .desc strong {
+  color: #fff;
+  font-weight: 600;
 }
 
 .footer .content::after {
